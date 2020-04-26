@@ -7,7 +7,7 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 
 <title>Jacobian_Analysis slides</title>
 
@@ -10477,7 +10477,7 @@ div.cell {
   margin: 0px;
   outline: none;
   position: relative;
-  overflow: scroll;
+  overflow: visible;
 }
 div.cell:before {
   position: absolute;
@@ -14499,9 +14499,7 @@ $\begin{bmatrix} ^{0}\boldsymbol{v}_{4} \\ ^{0} \boldsymbol{\omega}_{4} \end{bma
 
 </div>
 </div>
-</div></section></section>
-
-<section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
@@ -14736,8 +14734,9 @@ require(
             history: true,
 
             transition: "slide",
-		width: "100%",
-		height: "100%",
+		touch: false,
+		width: "110%",
+		height: "110%",
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -14763,12 +14762,10 @@ require(
               var h = $('.reveal').height() * 0.95;
               $('section.present').find('section')
                 .filter(function() {
-                  return $(this).height() > h/20;
+                  return $(this).height() > h*0;
                 })
                 .css('height', 'calc(95vh)')
                 .css('overflow-y', 'scroll')
-                .css('touch-action', 'auto')
-                .css('-webkit-overflow-scrolling', 'touch')
                 .css('margin-top', '20px');
             }
         }
