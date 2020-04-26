@@ -14761,11 +14761,10 @@ require(
               var h = $('.reveal').height() * 0.95;
               $('section.present').find('section')
                 .filter(function() {
-                  return $(this).height() > h/20;
+                  return true;
                 })
                 .css('height', 'calc(95vh)')
                 .css('overflow-y', 'scroll')
-                .css('touch-action', 'auto')
                 .css('-webkit-overflow-scrolling', 'touch')
                 .css('margin-top', '20px');
             }
